@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/*-----------------------------------------------------*/
+/* 共通設定
+/*-----------------------------------------------------*/
+:root {
+  /* カラー */
+  --background-color: #fff;
+  --background-th-color:#ED7D31;
+  --background-td-color: #FBECE7;
+  --fnt-h1-color: #ED7D31;
+  --border-color: #fff;
+  --fnt-color: #333;
+  --fnt-th-color: #fff;
+  /* フォントの種類 */
+  --font-family-sans-serif:"Source Sans Pro", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "Arial", sans-serif;
+}
+html {
+   /* 
+    ここで設定するフォントサイズの単位%はブラウザのフォントサイズを基準としています。
+    ブラウザのフォントサイズは、通常、初期設定は「中」となっており、約16pxになります。
+    よって、100% = 16pxとなるため、
+    62.5% → 16px * 0.625 = 10px
+    となります。
+  */
+  font-size: 62.5%;
+}
+
+body {
+	font-size: 2.4rem;  /* 24px */
+	font-family: var(--font-family-sans-serif);
+	color: var(--fnt-color);
+}
+/*-----------------------------------------------------*/
+/* headerの設定
+/*-----------------------------------------------------*/
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	
+	width:1000px;
+	height: 65px;                    /* 高さを画像の高さに合わせる */
+	margin-inline: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+/*-----------------------------------------------------*/
+/* mainの設定
+/*-----------------------------------------------------*/
+main {
+	width:1000px;
+	margin-inline: auto;
+}
+/* 各種設定
+-------------------------------------------------------*/
+h1{
+	height: 65px;
+	color: var(--fnt-h1-color);
+	font-size: 6.0rem;       /* 60px */
+	line-height: 65px;       /* ボックスの高さよりフォントサイズが小さい場合は縦位置中央になる */
+}
+
+/* 表の設定 */
+table {
+    width: 1000px;
+    border: 2px solid var(--border-color);
+}
+
+th {
+    width: 250px;
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    background-color: var(--background-th-color);
+    color: var(--fnt-th-color);
+    text-align: left;
+}
+td {
+    padding: 5px;
+    border: 2px solid var(--border-color);
+    background-color: var(--background-td-color);
+}
